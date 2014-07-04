@@ -87,6 +87,16 @@ imports:
 Usage
 -----
 
+Installing NeburtValidation, you installed automatically also bmatzner/jquery-bundle and friendsofsymfony/jsrouting-bundle
+
+
+#### Add jQuery
+Add this line in your layout:
+
+```
+<script type="text/javascript" src="{{ asset('bundles/bmatznerjquery/js/jquery.min.js') }}"></script>
+```
+
 #### Add FOSJsRoutingBundle
 Add these two lines in your layout:
 
@@ -94,4 +104,12 @@ Add these two lines in your layout:
 <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
 <script src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>
 ```
+
+#### Add rtValidation
+Add this line in your layout:
+
+```
+<script type="text/javascript" src="{{ asset('bundles/nebumixrtvalidation/js/nebumix_r_t_validation.js') }}"></script>
+```
+
 Continua ...
