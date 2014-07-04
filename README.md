@@ -83,13 +83,18 @@ imports:
 
 #### Installing NeburtValidation, you installed automatically also [`bmatzner/jquery-bundle`](https://github.com/bmatzner/BmatznerJQueryUIBundle) and [`friendsofsymfony/jsrouting-bundle`](https://github.com/FriendsOfSymfony/FOSJsRoutingBundle)
 
+##### We need to configure friendsofsymfony/jsrouting-bundle, you can look the official documentation in the official page.
 
+I suggest to add these lines in `app/config/config.yml`:
+
+``` yml
+# app/config/config.yml
+fos_js_routing:
+    routes_to_expose: [ nebumixrt_validation_check ]
+```
 
 Usage
 -----
-
-Installing NeburtValidation, you installed automatically also bmatzner/jquery-bundle and friendsofsymfony/jsrouting-bundle
-
 
 #### Add jQuery
 Add this line in your layout:
