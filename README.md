@@ -149,5 +149,7 @@ parameters:
                 message: insert an integer
 ```
 
+You have to use the name you used as `nameForm` in the javascript function following to the name used as `nameField` and to the validation rules, as you can see in the example.
+
 
 Continua ...
