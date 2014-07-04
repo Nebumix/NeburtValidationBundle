@@ -27,6 +27,7 @@ public function registerBundles()
 {
     $bundles = array(
         // ...
+        new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
         new Nebumix\rtValidationBundle\NebumixrtValidationBundle(),
         // ...
     );
