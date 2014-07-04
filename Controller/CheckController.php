@@ -5,19 +5,20 @@ namespace Nebumix\rtValidationBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 use Symfony\Component\Validator\Constraints\NotBlank;
-use Symfony\Component\Validator\Constraints\Blank
-use Symfony\Component\Validator\Constraints\NotNull
-use Symfony\Component\Validator\Constraints\Null
-use Symfony\Component\Validator\Constraints\Type
+use Symfony\Component\Validator\Constraints\Blank;
+use Symfony\Component\Validator\Constraints\NotNull;
+use Symfony\Component\Validator\Constraints\Null;
+use Symfony\Component\Validator\Constraints\Type;
 
-
-
-use Symfony\Component\Validator\Constraints\Regex;
 use Symfony\Component\Validator\Constraints\Length;
+use Symfony\Component\Validator\Constraints\Url;
+use Symfony\Component\Validator\Constraints\Regex;
+use Symfony\Component\Validator\Constraints\Ip;
+use Symfony\Component\Validator\Constraints\Uuid;
 use Symfony\Component\Validator\Constraints\Email;
+
 use Symfony\Component\Validator\Constraints\Date;
 use Symfony\Component\Validator\Constraints\NotEqualTo;
-use Symfony\Component\Validator\Constraints\Ip;
 use Symfony\Component\Validator\Constraints\Iban;
 
 use Symfony\Component\HttpFoundation\Request;
@@ -103,6 +104,30 @@ class CheckController extends Controller
 		return $errorList;
 	}
 
+	protected function LengthAction($name, $value, $nameForm)
+	{
+		$itemConstraint = new Length($this->container->getParameter($nameForm)[$name]['Length']);
+			    
+	    $errorList = $this->get('validator')->validateValue(
+	        $value,
+	        $itemConstraint
+	    );
+
+		return $errorList;
+	}
+
+	protected function UrlAction($name, $value, $nameForm)
+	{
+		$itemConstraint = new Url($this->container->getParameter($nameForm)[$name]['Url']);
+			    
+	    $errorList = $this->get('validator')->validateValue(
+	        $value,
+	        $itemConstraint
+	    );
+
+		return $errorList;
+	}
+
 	protected function RegexAction($name, $value, $nameForm)
 	{
 		$itemConstraint = new Regex($this->container->getParameter($nameForm)[$name]['Regex']);
@@ -115,18 +140,6 @@ class CheckController extends Controller
 		return $errorList;
 	}
 
-	protected function LengthAction($name, $value, $nameForm)
-	{
-		$itemConstraint = new Length($this->container->getParameter($nameForm)[$name]['Length']);
-			    
-	    $errorList = $this->get('validator')->validateValue(
-	        $value,
-	        $itemConstraint
-	    );
-
-		return $errorList;
-	}	
-
 	protected function IpAction($name, $value, $nameForm)
 	{
 		$itemConstraint = new Ip($this->container->getParameter($nameForm)[$name]['Ip']);
@@ -138,6 +151,30 @@ class CheckController extends Controller
 
 		return $errorList;
 	}		
+
+	protected function UuidAction($name, $value, $nameForm)
+	{
+		$itemConstraint = new Uuid($this->container->getParameter($nameForm)[$name]['Uuid']);
+			    
+	    $errorList = $this->get('validator')->validateValue(
+	        $value,
+	        $itemConstraint
+	    );
+
+		return $errorList;
+	}
+
+	protected function EmailAction($name, $value, $nameForm)
+	{
+		$itemConstraint = new Email($this->container->getParameter($nameForm)[$name]['Email']);
+			    
+	    $errorList = $this->get('validator')->validateValue(
+	        $value,
+	        $itemConstraint
+	    );
+
+		return $errorList;
+	}
 
 	protected function IbanAction($name, $value, $nameForm)
 	{
