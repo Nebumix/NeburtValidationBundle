@@ -132,4 +132,9 @@ $(function() {
 	});
 });  
 ```
+
+You need to replace `namefield` with the field name you want to validate, and `nameForm` with a name, it must to be different for each form.
+Is not necessary `nameForm` is the real form name, it needs just to distinguish the form fields in the validation file.
+
+
 Continua ...
