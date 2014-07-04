@@ -1,4 +1,4 @@
 nebumixrt_validation_check:
-    path:     /nebumixrt/alidation/check/
+    path:     /nebumixrt/validation/check/
     defaults: { _controller: NebumixrtValidationBundle:Check:checkField }
     methods:  [POST]
