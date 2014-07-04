@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Nebumix/rtValidationBundle
 =========================
 
@@ -55,9 +54,3 @@ $ php app/console assets:install --symlink web
 ```
 
 Continua ...
-=======
-NeburtValidationBundle
-======================
-
-Real time validation for Symfony2
->>>>>>> f7cd109799de17b4a505210f111885269f2dc43c
