@@ -153,9 +153,14 @@ parameters:
     nameForm:
         nameField:
             NotBlank:
+                message: Field is required.
             Regex: 
                 pattern: "/^\d+$/"
                 message: insert an integer
+        nameField1:
+            NotBlank:
+            Length:
+                min: 3
 ```
 
 You have to use the name you used as `nameForm` in the javascript function followed by the name used as `nameField` and by the validation rules, as you can see in the example.
