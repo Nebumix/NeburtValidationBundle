@@ -161,6 +161,3 @@ To print errors you can add in your layout:
 ```
 
 The div id must to have the `nameField` followed by `_error`
-
-
-Continua ...
