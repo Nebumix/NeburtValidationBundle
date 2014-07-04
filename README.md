@@ -160,4 +160,4 @@ To print errors you can add in your layout:
 <div id="nameField_error"></div>
 ```
 
-The div id must to have the `nameField` followed by `_error`
+The div id must to have the `nameField` followed by `_error`. You have to write one for each field.
