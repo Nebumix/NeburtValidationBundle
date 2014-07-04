@@ -1,4 +1,4 @@
-Nebumix/rtValidationBundle
+Nebumix/NeburtValidationBundle
 =========================
 
 A real time backend validation for Symfony2
