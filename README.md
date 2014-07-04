@@ -136,5 +136,18 @@ $(function() {
 You need to replace `namefield` with the field name you want to validate, and `nameForm` with a name, it must to be different for each form.
 Is not necessary `nameForm` is the real form name, it needs just to distinguish the form fields in the validation file.
 
+#### Write validation rules in `securityRT.yml`:
+
+``` yml
+parameters:
+    nebumix_rtvalidation.check.class: Nebumix\rtValidationBundle\Controller\CheckController
+    nameForm:
+        nameField:
+            NotBlank:
+            Regex: 
+                pattern: "/^\d+$/"
+                message: insert an integer
+```
+
 
 Continua ...
