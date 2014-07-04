@@ -62,4 +62,12 @@ Optionally, use the --symlink attribute to create links rather than copies of th
 $ php app/console assets:install --symlink web
 ```
 
+### Create new file `app/config/securityRT.yml`:
+
+``` yml
+# app/config/securityRT.yml
+parameters:
+    nebumix_rtvalidation.check.class: Nebumix\rtValidationBundle\Controller\CheckController
+```
+
 Continua ...
