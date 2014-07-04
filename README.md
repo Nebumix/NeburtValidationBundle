@@ -79,4 +79,19 @@ imports:
     - { resource: securityRT.yml }
 ```
 
+..........
+
+
+
+
+Usage
+-----
+
+#### Add FOSJsRoutingBundle
+Add these two lines in your layout:
+
+```
+<script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+<script src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>
+```
 Continua ...
