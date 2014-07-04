@@ -4,9 +4,16 @@ namespace Nebumix\rtValidationBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
+use Symfony\Component\Validator\Constraints\NotBlank;
+use Symfony\Component\Validator\Constraints\Blank
+use Symfony\Component\Validator\Constraints\NotNull
+use Symfony\Component\Validator\Constraints\Null
+use Symfony\Component\Validator\Constraints\Type
+
+
+
 use Symfony\Component\Validator\Constraints\Regex;
 use Symfony\Component\Validator\Constraints\Length;
-use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\Validator\Constraints\Email;
 use Symfony\Component\Validator\Constraints\Date;
 use Symfony\Component\Validator\Constraints\NotEqualTo;
@@ -39,6 +46,54 @@ class CheckController extends Controller
 	protected function NotBlankAction($name, $value, $nameForm)
 	{
 	    $itemConstraint = new NotBlank($this->container->getParameter($nameForm)[$name]['NotBlank']);
+
+	    $errorList = $this->get('validator')->validateValue(
+	        $value,
+	        $itemConstraint
+	    );
+
+		return $errorList;
+	}
+
+	protected function BlankAction($name, $value, $nameForm)
+	{
+	    $itemConstraint = new Blank($this->container->getParameter($nameForm)[$name]['Blank']);
+
+	    $errorList = $this->get('validator')->validateValue(
+	        $value,
+	        $itemConstraint
+	    );
+
+		return $errorList;
+	}
+
+	protected function NotNullAction($name, $value, $nameForm)
+	{
+	    $itemConstraint = new NotNull($this->container->getParameter($nameForm)[$name]['NotNull']);
+
+	    $errorList = $this->get('validator')->validateValue(
+	        $value,
+	        $itemConstraint
+	    );
+
+		return $errorList;
+	}
+
+	protected function NullAction($name, $value, $nameForm)
+	{
+	    $itemConstraint = new Null($this->container->getParameter($nameForm)[$name]['Null']);
+
+	    $errorList = $this->get('validator')->validateValue(
+	        $value,
+	        $itemConstraint
+	    );
+
+		return $errorList;
+	}
+
+	protected function TypeAction($name, $value, $nameForm)
+	{
+	    $itemConstraint = new Type($this->container->getParameter($nameForm)[$name]['Type']);
 
 	    $errorList = $this->get('validator')->validateValue(
 	        $value,
