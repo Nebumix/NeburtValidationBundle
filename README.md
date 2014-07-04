@@ -205,9 +205,13 @@ $( document ).ready(function() {
 This is just an example, you can write your own function.
 
 ### Supported Constraints:
-[`NotBlank`](http://symfony.com/doc/current/reference/constraints/NotBlank.html)  [`Blank`](http://symfony.com/doc/current/reference/constraints/Blank.html)  [`NotNull`](http://symfony.com/doc/current/reference/constraints/NotNull.html)  [`Null`](http://symfony.com/doc/current/reference/constraints/Null.html)  [`Type`](http://symfony.com/doc/current/reference/constraints/Type.html) 
-
-
+[`NotBlank`](http://symfony.com/doc/current/reference/constraints/NotBlank.html) [`Blank`](http://symfony.com/doc/current/reference/constraints/Blank.html)  [`NotNull`](http://symfony.com/doc/current/reference/constraints/NotNull.html)  [`Null`](http://symfony.com/doc/current/reference/constraints/Null.html)  [`Type`](http://symfony.com/doc/current/reference/constraints/Type.html) 
+[`Email`](http://symfony.com/doc/current/reference/constraints/Email.html) 
+[`Length`](http://symfony.com/doc/current/reference/constraints/Length.html) 
+[`Url`](http://symfony.com/doc/current/reference/constraints/Url.html) 
+[`Regex`](http://symfony.com/doc/current/reference/constraints/Regex.html) 
+[`Ip`](http://symfony.com/doc/current/reference/constraints/Ip.html) 
+[`Uuid`](http://symfony.com/doc/current/reference/constraints/Uuid.html) 
 
 ### Example
 ...
