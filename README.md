@@ -43,6 +43,9 @@ $ php composer.phar update nebumix/rt-validation-bundle
 
 ``` yml
 # app/config/routing.yml
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
+
 Nebumix_rtV_routing:
     resource: "@NebumixrtValidationBundle/Resources/config/routing.yml"
 ```
