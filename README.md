@@ -130,6 +130,15 @@ $(function() {
 	$('#form_namefield').focusout(function() {
 		check_field('nameForm', 'namefield');
 	});
+	$('#form_namefield1').focusout(function() {
+		check_field('nameForm', 'namefield1');
+	});
+	
+	//...
+	
+	$('#form_namefieldN').focusout(function() {
+		check_field('nameForm', 'namefieldN');
+	});
 });  
 ```
 
@@ -173,8 +182,13 @@ $( document ).ready(function() {
 
 		//list functions, each per field
 		var c_nameField = check_field('nameForm', 'nameField');
+		var c_nameField1 = check_field('nameForm', 'nameField1');
+		//..
+		var c_nameFieldN = check_field('nameForm', 'nameFieldN');
 
-		if( c_nameField == 1 )
+
+
+		if( c_nameField == 1 && c_nameField1 == 1 )
 		{
 			var form_data = $('#myForm').serialize();
 
@@ -190,6 +204,9 @@ $( document ).ready(function() {
 					alert('Saved');
 		                }else{
 					check_field('nameForm', 'nameField');
+					check_field('nameForm', 'nameField1');
+					//...
+					check_field('nameForm', 'nameFieldN');
 				}
 		        },
 		        error: function(){
