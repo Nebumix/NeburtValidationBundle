@@ -119,4 +119,18 @@ Add this line in your layout:
 <script type="text/javascript" src="{{ asset('bundles/nebumixrtvalidation/js/nebumix_r_t_validation.js') }}"></script>
 ```
 
+#### Write javascript functions
+To validate in real time a form field, you need to call a function to check your field.
+I use the .focusout function.
+
+To validate a text field you need to add in your layout:
+
+``` js
+<script type="text/javascript">
+	$(function() {  
+			$('#form_namefield').focusout(function() {
+				check_field('nameForm', 'namefield');
+			});					
+</script>
+```
 Continua ...
