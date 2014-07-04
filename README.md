@@ -27,7 +27,7 @@ public function registerBundles()
 {
     $bundles = array(
         // ...
-        new Bmatzner\JQueryUIBundle\BmatznerJQueryUIBundle(),
+        new Bmatzner\JQueryBundle\BmatznerJQueryBundle(),
         new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
         new Nebumix\rtValidationBundle\NebumixrtValidationBundle(),
         // ...
