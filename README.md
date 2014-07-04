@@ -81,7 +81,7 @@ imports:
 
 
 
-#### Installing NeburtValidation, you installed automatically also bmatzner/jquery-bundle and [`friendsofsymfony/jsrouting-bundle`](https://packagist.org/packages/friendsofsymfony/jsrouting-bundle)
+#### Installing NeburtValidation, you installed automatically also [`bmatzner/jquery-bundle`](https://github.com/bmatzner/BmatznerJQueryUIBundle) and [`friendsofsymfony/jsrouting-bundle`](https://github.com/FriendsOfSymfony/FOSJsRoutingBundle)
 
 
 
