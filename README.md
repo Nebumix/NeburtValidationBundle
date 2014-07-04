@@ -92,6 +92,7 @@ I suggest to add these lines in `app/config/config.yml`:
 fos_js_routing:
     routes_to_expose: [ nebumixrt_validation_check ]
 ```
+The route name you need is `nebumixrt_validation_check`
 
 Usage
 -----
