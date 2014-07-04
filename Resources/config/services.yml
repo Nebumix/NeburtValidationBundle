@@ -1,0 +1,7 @@
+parameters:
+#    nebumixrt_validation.example.class: Nebumix\rtValidationBundle\Example
+
+services:
+#    nebumixrt_validation.example:
+#        class: %nebumixrt_validation.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

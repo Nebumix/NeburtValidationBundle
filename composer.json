@@ -1,0 +1,27 @@
+{
+    "minimum-stability": "dev",
+    "name":        "nebumix/rt-validation-bundle",
+    "type":        "symfony-bundle",
+    "description": "real time backend validation for Symfony2",
+    "keywords":    ["jquery", "validation", "symfony2", "real time validation"],
+    "homepage":    "http://www.nebumix.com/",
+    "license":     ["MIT"],
+    "authors":     [
+        {
+            "name":     "Mario Alicicco",
+            "email":    "mario.alicicco@gmail.com",
+            "homepage": "http://www.nebumix.com"
+        }
+    ],
+    "require":     {
+        "symfony/framework-bundle": ">=2.4",
+        "bmatzner/jquery-bundle":  "*",
+        "friendsofsymfony/jsrouting-bundle": "@stable"
+    },
+    "autoload":    {
+        "psr-0": {
+            "Nebumix\\rtValidationBundle": ""
+        }
+    },
+    "target-dir":  "Nebumix/rtValidationBundle"
+}
