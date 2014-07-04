@@ -126,11 +126,9 @@ I use the .focusout function.
 To validate a text field you need to add in your layout:
 
 ``` js
-<script type="text/javascript">
 	$(function() {  
 			$('#form_namefield').focusout(function() {
 				check_field('nameForm', 'namefield');
 			});					
-</script>
 ```
 Continua ...
