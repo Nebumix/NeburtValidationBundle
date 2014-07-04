@@ -161,3 +161,49 @@ To print errors you can add in your layout:
 ```
 
 The div id must to have the `nameField` followed by `_error`. You have to write one for each field.
+
+
+### Send the form
+
+Now you can validate your form in real time, but if you like stopping the form if the validation returns errors, add the javascript function in your layout:
+
+``` js
+$( document ).ready(function() {
+	$( "#sendForm" ).click(function() {
+
+		//list functions, each per field
+		var c_nameField = check_field('nameForm', 'nameField');
+
+		if( c_nameField == 1 )
+		{
+
+			var form_data = $('#myForm').serialize();
+
+		      $.ajax({  
+        		//url: 'edit/action/',  
+        		url: Routing.generate('_your_route_to_save_form'),  
+		        type: "POST",  
+		        data:  form_data,
+		        dataType: "html",
+		        async : false,
+		        success: function(msg) { 
+				//if the function have no error return 1
+		                if(msg == 1){
+					alert('Saved');
+		                }else{
+					check_field('nameForm', 'nameField');
+				}
+		        },
+		        error: function(){
+		          alert("ERROR!");
+		        } 
+		    }); 
+
+		}
+	});
+});
+```
+
+This is just an example, you can write your own function.
+
+
