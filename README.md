@@ -204,6 +204,10 @@ $( document ).ready(function() {
 
 This is just an example, you can write your own function.
 
+### Supported Constraints:
+#### NotBlank, Blank, NotNull, Null, Type
+
 
 
 ### Example
+...
