@@ -179,7 +179,6 @@ $( document ).ready(function() {
 			var form_data = $('#myForm').serialize();
 
 		      $.ajax({  
-        		//url: 'edit/action/',  
         		url: Routing.generate('_your_route_to_save_form'),  
 		        type: "POST",  
 		        data:  form_data,
