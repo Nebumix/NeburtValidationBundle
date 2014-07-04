@@ -79,8 +79,9 @@ imports:
     - { resource: securityRT.yml }
 ```
 
-..........
 
+
+#### Installing NeburtValidation, you installed automatically also bmatzner/jquery-bundle and [`friendsofsymfony/jsrouting-bundle`](https://packagist.org/packages/friendsofsymfony/jsrouting-bundle)
 
 
 
