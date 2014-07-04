@@ -205,3 +205,5 @@ $( document ).ready(function() {
 This is just an example, you can write your own function.
 
 
+
+### Example
