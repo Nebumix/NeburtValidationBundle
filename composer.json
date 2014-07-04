@@ -1,5 +1,4 @@
 {
-    "minimum-stability": "dev",
     "name":        "nebumix/rt-validation-bundle",
     "type":        "symfony-bundle",
     "description": "real time backend validation for Symfony2",
