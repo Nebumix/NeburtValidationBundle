@@ -176,7 +176,6 @@ $( document ).ready(function() {
 
 		if( c_nameField == 1 )
 		{
-
 			var form_data = $('#myForm').serialize();
 
 		      $.ajax({  
