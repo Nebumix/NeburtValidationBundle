@@ -39,6 +39,15 @@ public function registerBundles()
 $ php composer.phar update nebumix/rt-validation-bundle
 ```
 
+Register the routing definition in `app/config/routing.yml`:
+
+``` yml
+# app/config/routing.yml
+Nebumix_rtV_routing:
+    resource: "@NebumixrtValidationBundle/Resources/config/routing.yml"
+```
+
+
 ### Install assets
 
 Given your server's public directory is named "web", install the public vendor resources
