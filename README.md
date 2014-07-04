@@ -70,4 +70,13 @@ parameters:
     nebumix_rtvalidation.check.class: Nebumix\rtValidationBundle\Controller\CheckController
 ```
 
+### Import the new file in `app/config/config.yml`:
+
+``` yml
+# app/config/config.yml
+imports:
+    // ...
+    - { resource: securityRT.yml }
+```
+
 Continua ...
