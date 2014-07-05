@@ -240,24 +240,39 @@ $( document ).ready(function() {
 This is just an example, you can write your own function.
 
 ### Supported Constraints:
-[`NotBlank`](http://symfony.com/doc/current/reference/constraints/NotBlank.html) [`Blank`](http://symfony.com/doc/current/reference/constraints/Blank.html)  [`NotNull`](http://symfony.com/doc/current/reference/constraints/NotNull.html)  [`Null`](http://symfony.com/doc/current/reference/constraints/Null.html)  [`Type`](http://symfony.com/doc/current/reference/constraints/Type.html) 
-[`Email`](http://symfony.com/doc/current/reference/constraints/Email.html) 
-[`Length`](http://symfony.com/doc/current/reference/constraints/Length.html) 
-[`Url`](http://symfony.com/doc/current/reference/constraints/Url.html) 
-[`Regex`](http://symfony.com/doc/current/reference/constraints/Regex.html) 
-[`Ip`](http://symfony.com/doc/current/reference/constraints/Ip.html) 
-[`Uuid (>=2.5)`](http://symfony.com/doc/current/reference/constraints/Uuid.html)  [`Range`](http://symfony.com/doc/current/reference/constraints/Range.html) 
-[`EqualTo`](http://symfony.com/doc/current/reference/constraints/EqualTo.html) 
-[`NotEqualTo`](http://symfony.com/doc/current/reference/constraints/NotEqualTo.html) 
-[`IdenticalTo`](http://symfony.com/doc/current/reference/constraints/IdenticalTo.html) 
-[`NotIdenticalTo`](http://symfony.com/doc/current/reference/constraints/NotIdenticalTo.html) 
-[`LessThan`](http://symfony.com/doc/current/reference/constraints/LessThan.html) 
-[`LessThanOrEqual`](http://symfony.com/doc/current/reference/constraints/LessThanOrEqual.html) 
-[`GreaterThan`](http://symfony.com/doc/current/reference/constraints/GreaterThan.html) 
-[`GreaterThanOrEqual`](http://symfony.com/doc/current/reference/constraints/GreaterThanOrEqual.html) 
-[`Date`](http://symfony.com/doc/current/reference/constraints/Date.html) 
-[`DateTime`](http://symfony.com/doc/current/reference/constraints/DateTime.html) 
-[`Time`](http://symfony.com/doc/current/reference/constraints/Time.html) 
+
+#### Basic Constraints
+* [`NotBlank`](http://symfony.com/doc/current/reference/constraints/NotBlank.html) 
+* [`Blank`](http://symfony.com/doc/current/reference/constraints/Blank.html)  
+* [`NotNull`](http://symfony.com/doc/current/reference/constraints/NotNull.html)  
+* [`Null`](http://symfony.com/doc/current/reference/constraints/Null.html)  
+* [`Type`](http://symfony.com/doc/current/reference/constraints/Type.html) 
+
+#### String Constraints
+* [`Email`](http://symfony.com/doc/current/reference/constraints/Email.html) 
+* [`Length`](http://symfony.com/doc/current/reference/constraints/Length.html) 
+* [`Url`](http://symfony.com/doc/current/reference/constraints/Url.html) 
+* [`Regex`](http://symfony.com/doc/current/reference/constraints/Regex.html) 
+* [`Ip`](http://symfony.com/doc/current/reference/constraints/Ip.html) 
+* [`Uuid (>=2.5)`](http://symfony.com/doc/current/reference/constraints/Uuid.html)  
+
+#### Number Constraints
+* [`Range`](http://symfony.com/doc/current/reference/constraints/Range.html) 
+
+#### Comparison Constraints
+* [`EqualTo`](http://symfony.com/doc/current/reference/constraints/EqualTo.html) 
+* [`NotEqualTo`](http://symfony.com/doc/current/reference/constraints/NotEqualTo.html) 
+* [`IdenticalTo`](http://symfony.com/doc/current/reference/constraints/IdenticalTo.html) 
+* [`NotIdenticalTo`](http://symfony.com/doc/current/reference/constraints/NotIdenticalTo.html) 
+* [`LessThan`](http://symfony.com/doc/current/reference/constraints/LessThan.html) 
+* [`LessThanOrEqual`](http://symfony.com/doc/current/reference/constraints/LessThanOrEqual.html) 
+* [`GreaterThan`](http://symfony.com/doc/current/reference/constraints/GreaterThan.html) 
+* [`GreaterThanOrEqual`](http://symfony.com/doc/current/reference/constraints/GreaterThanOrEqual.html) 
+
+#### Date Constraints
+* [`Date`](http://symfony.com/doc/current/reference/constraints/Date.html) 
+* [`DateTime`](http://symfony.com/doc/current/reference/constraints/DateTime.html) 
+* [`Time`](http://symfony.com/doc/current/reference/constraints/Time.html) 
 
 
 
