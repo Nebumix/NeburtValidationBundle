@@ -246,7 +246,20 @@ This is just an example, you can write your own function.
 [`Url`](http://symfony.com/doc/current/reference/constraints/Url.html) 
 [`Regex`](http://symfony.com/doc/current/reference/constraints/Regex.html) 
 [`Ip`](http://symfony.com/doc/current/reference/constraints/Ip.html) 
-[`Uuid`](http://symfony.com/doc/current/reference/constraints/Uuid.html) 
+[`Uuid`](http://symfony.com/doc/current/reference/constraints/Uuid.html) (>=2.5) [`Range`](http://symfony.com/doc/current/reference/constraints/Range.html) 
+[`EqualTo`](http://symfony.com/doc/current/reference/constraints/EqualTo.html) 
+[`NotEqualTo`](http://symfony.com/doc/current/reference/constraints/NotEqualTo.html) 
+[`IdenticalTo`](http://symfony.com/doc/current/reference/constraints/IdenticalTo.html) 
+[`NotIdenticalTo`](http://symfony.com/doc/current/reference/constraints/NotIdenticalTo.html) 
+[`LessThan`](http://symfony.com/doc/current/reference/constraints/LessThan.html) 
+[`LessThanOrEqual`](http://symfony.com/doc/current/reference/constraints/LessThanOrEqual.html) 
+[`GreaterThan`](http://symfony.com/doc/current/reference/constraints/GreaterThan.html) 
+[`GreaterThanOrEqual`](http://symfony.com/doc/current/reference/constraints/GreaterThanOrEqual.html) 
+[`Date`](http://symfony.com/doc/current/reference/constraints/Date.html) 
+[`DateTime`](http://symfony.com/doc/current/reference/constraints/DateTime.html) 
+[`Time`](http://symfony.com/doc/current/reference/constraints/Time.html) 
+
+
 
 ### Example
 ...
