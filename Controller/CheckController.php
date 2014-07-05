@@ -28,6 +28,9 @@ use Symfony\Component\Validator\Constraints\LessThanOrEqual;
 use Symfony\Component\Validator\Constraints\GreaterThan;
 use Symfony\Component\Validator\Constraints\GreaterThanOrEqual;
 
+use Symfony\Component\Validator\Constraints\Date;
+use Symfony\Component\Validator\Constraints\DateTime;
+use Symfony\Component\Validator\Constraints\Time;
 
 use Symfony\Component\Validator\Constraints\Date;
 use Symfony\Component\Validator\Constraints\NotEqualTo;
@@ -287,6 +290,42 @@ class CheckController extends Controller
 	protected function GreaterThanOrEqualAction($name, $value, $nameForm)
 	{
 		$itemConstraint = new GreaterThanOrEqual($this->container->getParameter($nameForm)[$name]['GreaterThanOrEqual']);
+			    
+	    $errorList = $this->get('validator')->validateValue(
+	        $value,
+	        $itemConstraint
+	    );
+
+		return $errorList;
+	}
+
+	protected function DateAction($name, $value, $nameForm)
+	{
+		$itemConstraint = new Date($this->container->getParameter($nameForm)[$name]['Date']);
+			    
+	    $errorList = $this->get('validator')->validateValue(
+	        $value,
+	        $itemConstraint
+	    );
+
+		return $errorList;
+	}
+	
+	protected function DateTimeAction($name, $value, $nameForm)
+	{
+		$itemConstraint = new DateTime($this->container->getParameter($nameForm)[$name]['DateTime']);
+			    
+	    $errorList = $this->get('validator')->validateValue(
+	        $value,
+	        $itemConstraint
+	    );
+
+		return $errorList;
+	}
+	
+	protected function     TimeAction($name, $value, $nameForm)
+	{
+		$itemConstraint = new Time($this->container->getParameter($nameForm)[$name]['Time']);
 			    
 	    $errorList = $this->get('validator')->validateValue(
 	        $value,
