@@ -23,6 +23,10 @@ use Symfony\Component\Validator\Constraints\EqualTo;
 use Symfony\Component\Validator\Constraints\NotEqualTo;
 use Symfony\Component\Validator\Constraints\IdenticalTo;
 use Symfony\Component\Validator\Constraints\NotIdenticalTo;
+use Symfony\Component\Validator\Constraints\LessThan;
+use Symfony\Component\Validator\Constraints\LessThanOrEqual;
+use Symfony\Component\Validator\Constraints\GreaterThan;
+use Symfony\Component\Validator\Constraints\GreaterThanOrEqual;
 
 
 use Symfony\Component\Validator\Constraints\Date;
@@ -235,6 +239,54 @@ class CheckController extends Controller
 	protected function NotIdenticalToAction($name, $value, $nameForm)
 	{
 		$itemConstraint = new NotIdenticalTo($this->container->getParameter($nameForm)[$name]['NotIdenticalTo']);
+			    
+	    $errorList = $this->get('validator')->validateValue(
+	        $value,
+	        $itemConstraint
+	    );
+
+		return $errorList;
+	}
+	
+	protected function LessThanAction($name, $value, $nameForm)
+	{
+		$itemConstraint = new LessThan($this->container->getParameter($nameForm)[$name]['LessThan']);
+			    
+	    $errorList = $this->get('validator')->validateValue(
+	        $value,
+	        $itemConstraint
+	    );
+
+		return $errorList;
+	}
+	
+	protected function LessThanOrEqualAction($name, $value, $nameForm)
+	{
+		$itemConstraint = new LessThanOrEqual($this->container->getParameter($nameForm)[$name]['LessThanOrEqual']);
+			    
+	    $errorList = $this->get('validator')->validateValue(
+	        $value,
+	        $itemConstraint
+	    );
+
+		return $errorList;
+	}
+	
+	protected function GreaterThanAction($name, $value, $nameForm)
+	{
+		$itemConstraint = new GreaterThan($this->container->getParameter($nameForm)[$name]['GreaterThan']);
+			    
+	    $errorList = $this->get('validator')->validateValue(
+	        $value,
+	        $itemConstraint
+	    );
+
+		return $errorList;
+	}
+
+	protected function GreaterThanOrEqualAction($name, $value, $nameForm)
+	{
+		$itemConstraint = new GreaterThanOrEqual($this->container->getParameter($nameForm)[$name]['GreaterThanOrEqual']);
 			    
 	    $errorList = $this->get('validator')->validateValue(
 	        $value,
