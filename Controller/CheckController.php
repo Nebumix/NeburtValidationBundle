@@ -17,6 +17,14 @@ use Symfony\Component\Validator\Constraints\Ip;
 use Symfony\Component\Validator\Constraints\Uuid;
 use Symfony\Component\Validator\Constraints\Email;
 
+use Symfony\Component\Validator\Constraints\Range;
+
+use Symfony\Component\Validator\Constraints\EqualTo;
+use Symfony\Component\Validator\Constraints\NotEqualTo;
+use Symfony\Component\Validator\Constraints\IdenticalTo;
+use Symfony\Component\Validator\Constraints\NotIdenticalTo;
+
+
 use Symfony\Component\Validator\Constraints\Date;
 use Symfony\Component\Validator\Constraints\NotEqualTo;
 use Symfony\Component\Validator\Constraints\Iban;
@@ -167,6 +175,66 @@ class CheckController extends Controller
 	protected function EmailAction($name, $value, $nameForm)
 	{
 		$itemConstraint = new Email($this->container->getParameter($nameForm)[$name]['Email']);
+			    
+	    $errorList = $this->get('validator')->validateValue(
+	        $value,
+	        $itemConstraint
+	    );
+
+		return $errorList;
+	}
+
+	protected function RangeAction($name, $value, $nameForm)
+	{
+		$itemConstraint = new Range($this->container->getParameter($nameForm)[$name]['Range']);
+			    
+	    $errorList = $this->get('validator')->validateValue(
+	        $value,
+	        $itemConstraint
+	    );
+
+		return $errorList;
+	}
+	
+	protected function EqualToAction($name, $value, $nameForm)
+	{
+		$itemConstraint = new EqualTo($this->container->getParameter($nameForm)[$name]['EqualTo']);
+			    
+	    $errorList = $this->get('validator')->validateValue(
+	        $value,
+	        $itemConstraint
+	    );
+
+		return $errorList;
+	}
+	
+	protected function NotEqualToAction($name, $value, $nameForm)
+	{
+		$itemConstraint = new NotEqualTo($this->container->getParameter($nameForm)[$name]['NotEqualTo']);
+			    
+	    $errorList = $this->get('validator')->validateValue(
+	        $value,
+	        $itemConstraint
+	    );
+
+		return $errorList;
+	}
+
+	protected function IdenticalToAction($name, $value, $nameForm)
+	{
+		$itemConstraint = new IdenticalTo($this->container->getParameter($nameForm)[$name]['IdenticalTo']);
+			    
+	    $errorList = $this->get('validator')->validateValue(
+	        $value,
+	        $itemConstraint
+	    );
+
+		return $errorList;
+	}
+
+	protected function NotIdenticalToAction($name, $value, $nameForm)
+	{
+		$itemConstraint = new NotIdenticalTo($this->container->getParameter($nameForm)[$name]['NotIdenticalTo']);
 			    
 	    $errorList = $this->get('validator')->validateValue(
 	        $value,
