@@ -125,6 +125,11 @@ Add this line in your layout:
 ```
 
 #### Write javascript functions
+
+This example supposed to have in the page a form with fields called `nameField`, `nameField1` ... It will be explain better in the example.
+
+
+
 To validate in real time a form field, you need to call a function to check your field.
 I use the .focusout function.
 
@@ -177,6 +182,9 @@ To print errors you can add in your layout:
 
 ``` html
 <div id="nameField_error"></div>
+<div id="nameField1_error"></div>
+/ ...
+<div id="nameFieldN_error"></div>
 ```
 
 The div id must to have the `nameField` followed by `_error`. You have to write one for each field.
