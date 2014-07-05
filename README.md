@@ -246,7 +246,7 @@ This is just an example, you can write your own function.
 [`Url`](http://symfony.com/doc/current/reference/constraints/Url.html) 
 [`Regex`](http://symfony.com/doc/current/reference/constraints/Regex.html) 
 [`Ip`](http://symfony.com/doc/current/reference/constraints/Ip.html) 
-[`Uuid`](http://symfony.com/doc/current/reference/constraints/Uuid.html) ( Uuid >=2.5) [`Range`](http://symfony.com/doc/current/reference/constraints/Range.html) 
+[`Uuid (>=2.5)`](http://symfony.com/doc/current/reference/constraints/Uuid.html)  [`Range`](http://symfony.com/doc/current/reference/constraints/Range.html) 
 [`EqualTo`](http://symfony.com/doc/current/reference/constraints/EqualTo.html) 
 [`NotEqualTo`](http://symfony.com/doc/current/reference/constraints/NotEqualTo.html) 
 [`IdenticalTo`](http://symfony.com/doc/current/reference/constraints/IdenticalTo.html) 
