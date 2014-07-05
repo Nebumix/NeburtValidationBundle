@@ -32,8 +32,8 @@ use Symfony\Component\Validator\Constraints\Date;
 use Symfony\Component\Validator\Constraints\DateTime;
 use Symfony\Component\Validator\Constraints\Time;
 
-use Symfony\Component\Validator\Constraints\Date;
-use Symfony\Component\Validator\Constraints\NotEqualTo;
+
+
 use Symfony\Component\Validator\Constraints\Iban;
 
 use Symfony\Component\HttpFoundation\Request;
@@ -323,7 +323,7 @@ class CheckController extends Controller
 		return $errorList;
 	}
 	
-	protected function     TimeAction($name, $value, $nameForm)
+	protected function TimeAction($name, $value, $nameForm)
 	{
 		$itemConstraint = new Time($this->container->getParameter($nameForm)[$name]['Time']);
 			    
@@ -347,15 +347,5 @@ class CheckController extends Controller
 		return $errorList;
 	}			
 
-	protected function DateAction($name, $value, $nameForm)
-	{
-		$itemConstraint = new Date($this->container->getParameter($nameForm)[$name]['Date']);
-			    
-	    $errorList = $this->get('validator')->validateValue(
-	        $value,
-	        $itemConstraint
-	    );
-
-		return $errorList;
-	}		
+		
 }
