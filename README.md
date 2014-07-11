@@ -274,6 +274,14 @@ This is just an example, you can write your own function.
 * [`DateTime`](http://symfony.com/doc/current/reference/constraints/DateTime.html) 
 * [`Time`](http://symfony.com/doc/current/reference/constraints/Time.html) 
 
+#### Financial and other Number Constraints
+* [`CardScheme`](http://symfony.com/doc/current/reference/constraints/CardScheme.html) 
+* [`Currency`](http://symfony.com/doc/current/reference/constraints/Currency.html) 
+* [`Luhn`](http://symfony.com/doc/current/reference/constraints/Luhn.html) 
+* [`Iban`](http://symfony.com/doc/current/reference/constraints/Iban.html) 
+* [`Isbn`](http://symfony.com/doc/current/reference/constraints/Isbn.html) 
+* [`Issn`](http://symfony.com/doc/current/reference/constraints/Issn.html)
+
 
 
 ### Example
