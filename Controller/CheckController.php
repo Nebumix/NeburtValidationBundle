@@ -32,9 +32,12 @@ use Symfony\Component\Validator\Constraints\Date;
 use Symfony\Component\Validator\Constraints\DateTime;
 use Symfony\Component\Validator\Constraints\Time;
 
-
-
+use Symfony\Component\Validator\Constraints\CardScheme;
+use Symfony\Component\Validator\Constraints\Currency;
+use Symfony\Component\Validator\Constraints\Luhn;
 use Symfony\Component\Validator\Constraints\Iban;
+use Symfony\Component\Validator\Constraints\Isbn;
+use Symfony\Component\Validator\Constraints\Issn;
 
 use Symfony\Component\HttpFoundation\Request;
 
@@ -335,6 +338,42 @@ class CheckController extends Controller
 		return $errorList;
 	}
 
+	protected function CardSchemeAction($name, $value, $nameForm)
+	{
+		$itemConstraint = new CardScheme($this->container->getParameter($nameForm)[$name]['CardScheme']);
+			    
+	    $errorList = $this->get('validator')->validateValue(
+	        $value,
+	        $itemConstraint
+	    );
+
+		return $errorList;
+	}
+
+	protected function CurrencyAction($name, $value, $nameForm)
+	{
+		$itemConstraint = new Currency($this->container->getParameter($nameForm)[$name]['Currency']);
+			    
+	    $errorList = $this->get('validator')->validateValue(
+	        $value,
+	        $itemConstraint
+	    );
+
+		return $errorList;
+	}
+
+	protected function LuhnAction($name, $value, $nameForm)
+	{
+		$itemConstraint = new Luhn($this->container->getParameter($nameForm)[$name]['Luhn']);
+			    
+	    $errorList = $this->get('validator')->validateValue(
+	        $value,
+	        $itemConstraint
+	    );
+
+		return $errorList;
+	}
+
 	protected function IbanAction($name, $value, $nameForm)
 	{
 		$itemConstraint = new Iban($this->container->getParameter($nameForm)[$name]['Iban']);
@@ -345,7 +384,42 @@ class CheckController extends Controller
 	    );
 
 		return $errorList;
+	}
+
+	protected function IbanAction($name, $value, $nameForm)
+	{
+		$itemConstraint = new Iban($this->container->getParameter($nameForm)[$name]['Iban']);
+			    
+	    $errorList = $this->get('validator')->validateValue(
+	        $value,
+	        $itemConstraint
+	    );
+
+		return $errorList;
+	}
+
+	protected function IsbnAction($name, $value, $nameForm)
+	{
+		$itemConstraint = new Isbn($this->container->getParameter($nameForm)[$name]['Isbn']);
+			    
+	    $errorList = $this->get('validator')->validateValue(
+	        $value,
+	        $itemConstraint
+	    );
+
+		return $errorList;
 	}			
 
+	protected function IssnAction($name, $value, $nameForm)
+	{
+		$itemConstraint = new Issn($this->container->getParameter($nameForm)[$name]['Issn']);
+			    
+	    $errorList = $this->get('validator')->validateValue(
+	        $value,
+	        $itemConstraint
+	    );
+
+		return $errorList;
+	}	
 		
 }
