@@ -386,18 +386,6 @@ class CheckController extends Controller
 		return $errorList;
 	}
 
-	protected function IbanAction($name, $value, $nameForm)
-	{
-		$itemConstraint = new Iban($this->container->getParameter($nameForm)[$name]['Iban']);
-			    
-	    $errorList = $this->get('validator')->validateValue(
-	        $value,
-	        $itemConstraint
-	    );
-
-		return $errorList;
-	}
-
 	protected function IsbnAction($name, $value, $nameForm)
 	{
 		$itemConstraint = new Isbn($this->container->getParameter($nameForm)[$name]['Isbn']);
