@@ -51,6 +51,10 @@ class CheckController extends Controller
 		$name  = $request->request->get('name');
 		$nameForm  = $request->request->get('nameForm');
 
+		if(!isset($this->container->getParameter($nameForm)[$name])){
+			return new Response('Error, You have wrong variable names in the configuration file or in the javascript function.');
+		}
+
 		foreach($this->container->getParameter($nameForm)[$name] as $key => $val){
 			$name_function = $key."Action";
 			$error = $this->$name_function($name, $value, $nameForm);
@@ -60,7 +64,7 @@ class CheckController extends Controller
 		}
 
 		return new Response('1');
-	}	
+	}		
 
 	protected function NotBlankAction($name, $value, $nameForm)
 	{
