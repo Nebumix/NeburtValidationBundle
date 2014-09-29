@@ -137,43 +137,54 @@ To validate a text field you need to add in your layout:
 
 ``` js
 $(function() {  
-	$('#form_namefield').focusout(function() {
-		check_field('nameForm', 'namefield');
+	$('#nameForm_nameField').focusout(function() {
+		check_field('nameValidation', 'nameForm_nameField');
 	});
-	$('#form_namefield1').focusout(function() {
-		check_field('nameForm', 'namefield1');
+	$('#nameForm_nameField1').focusout(function() {
+		check_field('nameValidation', 'nameForm_nameField1');
 	});
 	
 	//...
 	
-	$('#form_namefieldN').focusout(function() {
-		check_field('nameForm', 'namefieldN');
+	$('#nameForm_nameFieldN').focusout(function() {
+		check_field('nameValidation', 'nameForm_nameFieldN');
 	});
+	
+	
+	//if you have a radio or checkbox
+	$('#nameForm_nameFieldN').onchange(function() {
+		check_field_check('nameValidation', 'nameFieldToCheck');
+	});
+	
 });  
 ```
 
-You need to replace `namefield` with the field name you want to validate, and `nameForm` with a name, it must to be different for each form.
-Is not necessary `nameForm` is the real form name, it needs just to distinguish the form fields in the validation file.
+You need to replace `nameField` with the field name you want to validate and `nameForm` with the form name (generally the id field is made using nameForm_nameField). 
+You need to replace `nameValidation` with a name, it must to be different for each form.
+Is not necessary `nameValidation` is the real form name, it needs just to distinguish the form fields in the validation file.
 
 #### Write validation rules in `securityRT.yml`:
 
 ``` yml
 parameters:
     nebumix_rtvalidation.check.class: Nebumix\rtValidationBundle\Controller\CheckController
-    nameForm:
-        nameField:
+    nameValidation:
+        nameForm_nameField:
             NotBlank:
                 message: Field is required.
             Regex: 
                 pattern: "/^\d+$/"
                 message: insert an integer
-        nameField1:
+        nameForm_nameField1:
             NotBlank:
             Length:
                 min: 3
+        nameFieldToCheck:
+            NotBlank:
+
 ```
 
-You have to use the name you used as `nameForm` in the javascript function followed by the name used as `nameField` and by the validation rules, as you can see in the example.
+You have to use the name you used as `nameValidation` in the javascript function followed by the name used as `nameForm_nameField` and by the validation rules, as you can see in the example.
 
 
 ### Print errors
@@ -181,13 +192,13 @@ You have to use the name you used as `nameForm` in the javascript function follo
 To print errors you can add in your layout:
 
 ``` html
-<div id="nameField_error"></div>
-<div id="nameField1_error"></div>
+<div id="nameForm_nameField_error"></div>
+<div id="nameForm_nameField1_error"></div>
 / ...
-<div id="nameFieldN_error"></div>
+<div id="nameForm_nameFieldN_error"></div>
 ```
 
-The div id must to have the `nameField` followed by `_error`. You have to write one for each field.
+The div id must to have the `nameForm_nameField` followed by `_error`. You have to write one for each field.
 
 
 ### Send the form
@@ -199,10 +210,13 @@ $( document ).ready(function() {
 	$( "#sendForm" ).click(function() {
 
 		//list functions, each per field
-		var c_nameField = check_field('nameForm', 'nameField');
-		var c_nameField1 = check_field('nameForm', 'nameField1');
+		var c_nameField = check_field('nameValidation', 'nameForm_nameField');
+		var c_nameField1 = check_field('nameValidation', 'nameForm_nameField1');
 		//..
-		var c_nameFieldN = check_field('nameForm', 'nameFieldN');
+		var c_nameFieldN = check_field('nameValidation', 'nameForm_nameFieldN');
+		
+		//if you have a radio or checkbox
+		var c_nameFieldToCheck = check_field_check('nameValidation', 'nameFieldToCheck');
 
 
 
@@ -221,10 +235,10 @@ $( document ).ready(function() {
 		                if(msg == 1){
 					alert('Saved');
 		                }else{
-					check_field('nameForm', 'nameField');
-					check_field('nameForm', 'nameField1');
+					check_field('nameValidation', 'nameForm_nameField');
+					check_field('nameValidation', 'nameForm_nameField1');
 					//...
-					check_field('nameForm', 'nameFieldN');
+					check_field('nameValidation', 'nameForm_nameFieldN');
 				}
 		        },
 		        error: function(){
